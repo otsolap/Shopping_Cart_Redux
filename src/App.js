@@ -17,7 +17,7 @@ class App extends Component {
     }
   }
 
-  removeFromCat = (product) => {
+  removeFromCart = (product) => {
     const cartItems = this.state.cartItems.slice();
     this.setState({
       cartItems: cartItems.filter((x) => x.id !== product.id),
