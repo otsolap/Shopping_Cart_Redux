@@ -5,8 +5,8 @@
 			"title": "Dress 1",
 			"image": "/images/dress1.jpg",
 			"description": "such a lovely, dress!",
-			"price": 19.99,
-			"availableSizes": [ "S", "M", "L" ]
+			"price": 29.99,
+			"availableSizes": [ "M" ]
 		},
 		{
 			"id": "dress2",
@@ -14,39 +14,39 @@
 			"image": "/images/dress2.jpg",
 			"description": "such a lovely, dress!",
 			"price": 19.99,
-			"availableSizes": [ "S", "M", "L" ]
+			"availableSizes": [ "S", "M" ]
 		},
 		{
 			"id": "dress3",
 			"title": "Dress 3",
 			"image": "/images/dress3.jpg",
 			"description": "such a lovely, dress!",
-			"price": 19.99,
-			"availableSizes": [ "S", "M", "L" ]
+			"price": 69.99,
+			"availableSizes": [ "M", "L" ]
 		},
 		{
 			"id": "dress4",
 			"title": "Dress 4",
 			"image": "/images/dress4.jpg",
 			"description": "such a lovely, dress!",
-			"price": 19.99,
-			"availableSizes": [ "S", "M", "L" ]
+			"price": 34.99,
+			"availableSizes": [ "S", "M" ]
 		},
 		{
 			"id": "dress5",
 			"title": "Dress 5",
 			"image": "/images/dress5.jpg",
 			"description": "such a lovely, dress!",
-			"price": 19.99,
-			"availableSizes": [ "S", "M", "L" ]
+			"price": 24.99,
+			"availableSizes": [ "M", "L" ]
 		},
 		{
 			"id": "dress6",
 			"title": "Dress 6",
 			"image": "/images/dress6.jpg",
 			"description": "such a lovely, dress!",
-			"price": 19.99,
-			"availableSizes": [ "S", "M", "L" ]
+			"price": 14.99,
+			"availableSizes": [ "S" ]
 		}
 	]
 }
