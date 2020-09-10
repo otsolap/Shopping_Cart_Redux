@@ -214,3 +214,29 @@ input {
 	padding: 1rem;
 	border: .1rem #c0c0c0 solid;
 }
+
+/* Modal and Fade - Product Details */
+.product-details {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-height: 95vh;
+}
+
+.product-details img {
+	max-height: 100vh;
+	max-width: 46rem;
+	margin: 0 auto;
+}
+
+.product-details-description {
+	flex: 1 1;
+	margin: 1 rem;
+}
+
+.close-modal {
+	position: absolute;
+	right: 1rem;
+	top: 2.5rem;
+	z-index: 9000;
+}
