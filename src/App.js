@@ -13,8 +13,14 @@ class App extends Component {
       products: data.products,
       size: "",
       sort: "",
-      cartItems: [],
+      cartItems: JSON.parse(localStorage.getItem('cartItems'))
+        ? JSON.parse(localStorage.getItem('cartItems'))
+        : [],
     }
+  }
+
+  createOrder = (order) => {
+    alert('We need to save order for ' + order.name)
   }
 
   removeFromCart = (product) => {
@@ -38,7 +44,8 @@ class App extends Component {
     if (!alreadyInCart) {
       cartItems.push({ ...product, count: 1 });
     }
-    this.setState({ cartItems })
+    this.setState({ cartItems });
+    localStorage.setItem('cartItems', JSON.stringify(this.state.cartItems));
   }
 
   sortProducts = (event) => {
@@ -101,6 +108,7 @@ class App extends Component {
               <Cart
                 cartItems={this.state.cartItems}
                 removeFromCart={this.removeFromCart}
+                createOrder={this.createOrder}
               />
             </div>
           </div>
