@@ -13,6 +13,8 @@ mongoose.connect("mongodb://localhost/Shopping_Cart_DB", {
     useUnifiedTopology: true,
 });
 
+/* PRODUCTS */
+
 const Product = mongoose.model(
     'products',
     new mongoose.Schema({
@@ -40,6 +42,43 @@ app.delete('/api/products/:id', async (req, res) => {
     const deletedProduct = await Product.findByIdAndDelete(req.params.id);
     res.send(deletedProduct);
 })
+
+/* ORDERS */
+
+const Order = mongoose.model(
+    'order',
+    new mongoose.Schema({
+        _id: { type: String, default: shortid.generate },
+        email: String,
+        name: String,
+        Address: String,
+        total: Number,
+        cartItems: [{
+            _id: String,
+            title: String,
+            price: Number,
+            count: Number
+        }],
+    },
+        {
+            timestamps: true,
+        }
+    ));
+
+app.post('/api/orders', async (req, res) => {
+    if (!req.body.name ||
+        !req.body.email ||
+        !req.body.address ||
+        !req.body.cartItems ||
+        !req.body.total) {
+        return res.send({ message: 'Data is required!' });
+    }
+    const order = await Order(req.body).save();
+    res.send(order);
+});
+
+
+
 
 app.listen(PORT, () => {
     console.log(`Live on channel ${PORT}, baby.`)
